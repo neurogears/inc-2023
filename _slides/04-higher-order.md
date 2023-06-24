@@ -10,7 +10,7 @@ permalink: /slides/higher-order/
 ![Bonsai](../../assets/images/bonsai-lettering.svg)
 
 ### Higher Order Operators
-[neurogears.org/vrp-2022](https://neurogears.org/vrp-2022)
+[neurogears.org/inc-2023](https://neurogears.org/inc-2023)
 <table style="width: 100%;">
   <tr>
     <th style="vertical-align: middle; width: 50%; height: 100px; padding-left: 100px">
@@ -254,7 +254,7 @@ permalink: /slides/higher-order/
 ![Bonsai](../../assets/images/bonsai-lettering.svg)
 
 ### Questions?
-[neurogears.org/vrp-2022](https://neurogears.org/vrp-2022)
+[neurogears.org/inc-2023](https://neurogears.org/inc-2023)
 <table style="width: 100%;">
   <tr>
     <th style="vertical-align: middle; width: 50%; height: 100px; padding-left: 100px">
