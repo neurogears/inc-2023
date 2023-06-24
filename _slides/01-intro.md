@@ -27,73 +27,122 @@ permalink: /slides/intro/
 ### Outline
 
 * What is Bonsai?
-* Hardware & Software Ecosystem
-  * Harp
-  * Open-Ephys
-  * Fiber photometry, etc
-  * DeepLabCut, SLEAP
-  * ...
+	* The problem of multiple asynchronous data streams
+	* The reactive framework
+	* Operators and Observable sequences
+	* Core Bonsai concepts
+	* Hardware & Software Ecosystem
+* Demos
+
 
 ---
+
 
 <!-- .element: data-transition="default none" -->
-#### What is Bonsai?
-![Reactive Programming](../../assets/images/bonsai-algebra-1.svg)
-<!-- .element: class="fragment" data-fragment-index="1" -->
-
---
-
-<!-- .element: data-transition="none" -->
-#### What is Bonsai?
-![Reactive Programming](../../assets/images/bonsai-algebra-2.svg)
-
---
-
-<!-- .element: data-transition="none" -->
-#### What is Bonsai?
-![Reactive Programming](../../assets/images/bonsai-algebra.svg)
-
----
-
-#### What is Bonsai?
-
-![Bonsai](../../assets/images/bonsai-core.svg)
-
----
-
-<!-- .element: data-transition="default none" -->
-### Why do we need a new algebra?
+### Neuroscience experiments and data streams
 ![Behavior Experiments](../../assets/images/behavior-experiments-1.svg)
 
 --
 
 <!-- .element: data-transition="none" -->
-### Why do we need a new algebra?
+### Neuroscience experiments and data streams
 ![Behavior Experiments](../../assets/images/behavior-experiments-2.svg)
 
 --
 
 <!-- .element: data-transition="none" -->
-### Why do we need a new algebra?
+### Neuroscience experiments and data streams
 ![Behavior Experiments](../../assets/images/behavior-experiments-3.svg)
 
 --
 
 <!-- .element: data-transition="none" -->
-### Why do we need a new algebra?
+### Neuroscience experiments and data streams
 ![Behavior Experiments](../../assets/images/behavior-experiments-4.svg)
 
 --
 
 <!-- .element: data-transition="none" -->
-### Why do we need a new algebra?
+### Neuroscience experiments and data streams
 ![Behavior Experiments](../../assets/images/behavior-experiments-5c.svg)
 
 --
 
 <!-- .element: data-transition="none" -->
-### Why do we need a new algebra?
+### Neuroscience experiments and data streams
 ![Behavior Experiments](../../assets/images/behavior-experiments-5.svg)
+
+---
+
+<!-- .element: data-transition="default none" -->
+#### The problem of multiple asynchronous data streams
+
+```python
+import cv2
+
+camera0 = cv2.VideoCapture(1)
+camera1 = cv2.VideoCapture(2)
+while True:
+   ret0, img0 = camera0.read()
+   ret1, img1 = camera1.read()
+   if (img0):
+       cv2.imshow('img1',img0)
+   if (img1):
+       cv2.imshow('img2',img1)
+```
+<!-- .element: class="fragment" data-fragment-index="1" -->
+
+--
+
+<!-- .element: data-transition="none" -->
+#### What is the problem?
+
+ - Camera -> Tracking -> Log Data -> Camera -> Tracking -> Log Data -> Camera -> Tracking -> Log Data -> (...)
+
+--
+
+<!-- .element: data-transition="none" -->
+#### What is the problem?
+
+ - Camera1 -> Tracking1 -> Log Data -> Camera2 -> Tracking2 -> Log Data2 -> Camera1 -> Tracking1 -> Log Data -> Camera2 -> Tracking2 -> Log Data2 -> Camera1 -> Tracking1 -> Log Data -> Camera2 -> Tracking2 -> Log Data2 (...)
+
+
+--
+
+<!-- .element: data-transition="none" -->
+#### What is the problem?
+
+ - Camera1 -> Tracking1 -> Log Data -> Camera2 -> Tracking2 -> Log Data2 -> Nose Port value? -> If yes, Play Sound -> Log Nose port -> Acquire Microphone -> Log Microphone Data -> Acquire Ephys Data -> Log Ephys Data -> Camera1 -> Tracking1 -> Log Data -> Camera2 -> Tracking2 -> Log Data2 -> (...) -> Nose Port value? -> If yes, Play Sound -> Log Nose port -> Acquire Microphone -> Log Microphone Data -> Acquire Ephys Data -> Log Ephys Data -> Camera1 -> Tracking1 -> Log Data -> Camera2 -> Tracking2 -> Log Data2 -> (...) -> Nose Port value? -> If yes, Play Sound -> Log Nose port -> Acquire Microphone -> Log Microphone Data -> Acquire Ephys Data -> Log Ephys Data
+
+--
+
+<!-- .element: data-transition="none" -->
+#### Working with asynchronous data streams (just be "Reactive"...)
+
+ - Camera1 -> Tracking1 -> Log Data
+ - Camera2 -> Tracking2 -> Log Data2
+ - Nose Port Value -> Log Nose Port
+ - If Nose Port -> Play Speaker
+ - Acquire Microphone -> Log Microphone Data
+ - Acquire Ephys Data -> Log Ephys Data
+
+---
+
+<!-- .element: data-transition="default" -->
+### Core Bonsai design principles
+
+- Handling asynchronous data streams and online processing
+- Built of top of the Reactive Framework
+- Quick and easy experimental prototyping
+- Extensibility and modularity
+- Open-source
+
+--
+
+<!-- .element: data-transition="default" -->
+### What is Bonsai?
+
+![Bonsai](../../assets/images/bonsai-core.svg)
 
 ---
 
