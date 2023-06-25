@@ -271,13 +271,6 @@ while True:
   <p>Mathis et al., Nat Neurosci, 2018</p>
 </section>
 
-<section>
-  <h4>Multi-animal tracking</h4>
-  <img src="../../assets/images/bonsai-bonzeb.svg" alt="BonZeb" />
-  <video data-autoplay src="https://github.com/ncguilbeault/BonZeb/raw/master/Videos/Supplemental%20video%206%20-%20Multi-animal%20tracking%20with%20OMR.mp4" height="300px"></video>
-  <a href="https://ncguilbeault.github.io/BonZeb/">ncguilbeault.github.io/BonZeb</a>
-  <p>Guilbeault et al., Sci Rep, 2021</p>
-</section>
 
 <section>
   <h4>Multi-animal pose and identity tracking</h4>
