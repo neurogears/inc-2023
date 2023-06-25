@@ -26,13 +26,11 @@ permalink: /slides/intro/
 
 ### Outline
 
+* Neuroscience Experiments and the Reactive Framework
 * What is Bonsai?
-	* The problem of multiple asynchronous data streams
-	* The reactive framework
-	* Operators and Observable sequences
-	* Core Bonsai concepts
-	* Hardware & Software Ecosystem
+* Core Concepts
 * Demos
+* Tutorial
 
 
 ---
@@ -129,7 +127,7 @@ while True:
 ---
 
 <!-- .element: data-transition="default" -->
-### Core Bonsai design principles
+## Core Bonsai Designing Principles
 
 - Handling asynchronous data streams and online processing
 - Built of top of the Reactive Framework
@@ -137,14 +135,13 @@ while True:
 - Extensibility and modularity
 - Open-source
 
+---
+
+## "Observable Sequences"
+
+
 --
 
-<!-- .element: data-transition="default" -->
-### What is Bonsai?
-
-![Bonsai](../../assets/images/bonsai-core.svg)
-
----
 
 <!-- .element: data-transition="default none" -->
 ![Workflow](../../assets/images/graycam.svg)
@@ -202,9 +199,10 @@ while True:
 
 ---
 
-![Bonsai workflow editor](../../assets/images/editor.jpg)
+## The Bonsai Ecosystem
 
----
+
+--
 
 ![Bonsai Ecosystem](../../assets/images/bonsai-packages.svg)
 
@@ -221,11 +219,6 @@ while True:
     <section data-background-iframe="https://www.youtube.com/embed/qXqAXgXJPmo?controls=0&amp;enablejsapi=1&amp;autoplay=1&amp;showinfo=0&amp;rel=0&amp;html5=1">
       <table style="height: 20%; margin-top: 65%; margin-left: -78px;">
         <tr><th>Lorenza Calcaterra, Kampff Lab</th></tr>
-      </table>
-    </section>
-    <section data-background-iframe="https://www.youtube.com/embed/hz_OnvH9sa0?controls=0&amp;enablejsapi=1&amp;autoplay=1&amp;loop=1&amp;playlist=hz_OnvH9sa0&amp;showinfo=0&amp;rel=0&amp;html5=1">
-      <table style="height: 20%; margin-top: 65%; margin-left: -78px;">
-        <tr><th>Joana Neto et al., Kampff Lab</th></tr>
       </table>
     </section>
     <section data-background-iframe="https://www.youtube.com/embed/mJDV07ptQFk?start=40&amp;controls=0&amp;enablejsapi=1&amp;autoplay=1&amp;showinfo=0&amp;rel=0&amp;html5=1">
